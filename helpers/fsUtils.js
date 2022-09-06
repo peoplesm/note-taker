@@ -31,13 +31,17 @@ const readAndAppend = (content, file) => {
   });
 };
 
-const readAndDelete = (content, file) => {
+const readAndDelete = (id, file) => {
   fs.readFile(file, "utf8", (err, data) => {
     if (err) {
       console.error(err);
     } else {
       const parsedData = JSON.parse(data);
-      parsedData.pop(content);
+      for (let i = 0; i < parsedData.length; i++) {
+        if (parsedData[i].id === id) {
+          parsedData.splice(i, 1);
+        }
+      }
       writeToFile(file, parsedData);
     }
   });

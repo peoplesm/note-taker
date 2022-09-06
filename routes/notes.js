@@ -31,17 +31,12 @@ notes.post("/", (req, res) => {
   }
 });
 
-notes.delete("/", (req, res) => {
-  if ((notes.id = notes.id)) {
-    readAndDelete(notes, "./db/db.json");
-    const response = {
-      status: "success",
-      body: newNote,
-    };
-    res.json(response);
-  } else {
-    res.json("Error in deleteing note");
-  }
+notes.delete("/:id", (req, res) => {
+  readAndDelete(req.params.id, "./db/db.json");
+  const response = {
+    status: "success",
+  };
+  res.json(response);
 });
 
 module.exports = notes;
