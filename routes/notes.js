@@ -11,6 +11,7 @@ notes.get("/", (req, res) => {
   readFromFile("./db/db.json").then((data) => res.json(JSON.parse(data)));
 });
 
+//Post route for new note
 notes.post("/", (req, res) => {
   const { title, text } = req.body;
   if (title && text) {
@@ -31,6 +32,7 @@ notes.post("/", (req, res) => {
   }
 });
 
+//Delete route for selected note based on its id
 notes.delete("/:id", (req, res) => {
   readAndDelete(req.params.id, "./db/db.json");
   const response = {
