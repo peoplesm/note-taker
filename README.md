@@ -7,6 +7,7 @@ This assignment was to modify starter code to create an application called Note 
 - [Skills Practiced](#skills-practiced)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Screenshots](#screeenshots)
 - [Deployed App](#link-to-deployed-app)
 - [Questions](#questions)
 
@@ -36,6 +37,10 @@ If you want to download the app locally follow these steps.
 ## Usage
 
 Allows a user to write, save and delete notes that persist in the app's db.json file.
+
+## Screeenshots
+
+![alt text](./public/assets/images/note-taker-splash-ss.png) ![alt text](./public/assets/images/note-taker-app-ss.png)
 
 ## Link to Deployed App
 
